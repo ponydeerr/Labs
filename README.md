@@ -2,7 +2,7 @@
 
 # Labs
 
-Game asset viewer built with Avalonia, supports Unreal Engine 4/5 Games with package browsing, 3D model viewing, audio playback, and texture previewing.
+Browse, view, and extract assets from Unreal Engine games — packages, textures, 3D models, and audio all in one place.
 
 ![Packages](https://github.com/user-attachments/assets/42636066-a08c-410c-a6c0-ec9ad824c274)
 ![File Browser](https://github.com/user-attachments/assets/a15f09a2-a46d-4ee5-9755-3be4bca73b6e)
@@ -14,6 +14,10 @@ Game asset viewer built with Avalonia, supports Unreal Engine 4/5 Games with pac
 
 1. Download the latest `Labs.exe` from [Releases](https://github.com/ponydeerr/Labs/releases/latest)
 2. Run it — no installation needed
+
+## Support
+
+Join the [Discord server](https://discord.gg/qBATMyYuNN) if you need help or want to report issues.
 
 ## Credits
 
