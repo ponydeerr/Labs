@@ -1,0 +1,8 @@
+bin/
+obj/
+_publish/
+*.user
+*.suo
+.vs/
+.idea/
+*.zip
