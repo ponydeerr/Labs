@@ -4,9 +4,9 @@
 
 Browse, view, and extract assets from Unreal Engine games — packages, textures, 3D models, and audio all in one place.
 
-![Packages](https://github.com/user-attachments/assets/42636066-a08c-410c-a6c0-ec9ad824c274)
-![File Browser](https://github.com/user-attachments/assets/a15f09a2-a46d-4ee5-9755-3be4bca73b6e)
-![Thumbnails](https://github.com/user-attachments/assets/2d4ef4eb-82ac-4018-8cc2-d710c42770d6)
+<img width="2560" height="1440" alt="Screenshot (26)" src="https://github.com/user-attachments/assets/195e5905-96d8-459a-ab8f-1ccfb1c4f7f1" />
+<img width="2560" height="1440" alt="Screenshot (28)" src="https://github.com/user-attachments/assets/50e900e1-27ba-492a-9430-57c4d13802ef" />
+<img width="2560" height="1440" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/f775eea4-46d8-4983-9f27-92e4eeea1ce1" />
 
 </div>
 
