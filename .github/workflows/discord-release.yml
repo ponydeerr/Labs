@@ -1,0 +1,61 @@
+name: Discord Release Notification
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Notification
+        uses: actions/github-script@v7
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          script: |
+            const release = context.payload.release;
+            const webhook = process.env.DISCORD_WEBHOOK;
+            if (!webhook) {
+              core.setFailed('DISCORD_WEBHOOK secret not set');
+              return;
+            }
+
+            // Truncate body to 1000 chars for Discord embed limit
+            let body = release.body || 'No release notes.';
+            if (body.length > 1000) body = body.substring(0, 997) + '...';
+
+            const embed = {
+              embeds: [{
+                title: `${release.name || release.tag_name}`,
+                description: body,
+                url: release.html_url,
+                color: 0x3B82F6,
+                thumbnail: {
+                  url: 'https://github.com/' + context.repo.owner + '/' + context.repo.repo + '/raw/main/Labs/Assets/LabsLogo.ico'
+                },
+                fields: [
+                  {
+                    name: 'Download',
+                    value: `[**Click here to download**](${release.html_url})`,
+                    inline: false
+                  }
+                ],
+                footer: {
+                  text: `Labs ${release.tag_name}`
+                },
+                timestamp: release.published_at
+              }]
+            };
+
+            const response = await fetch(webhook, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(embed)
+            });
+
+            if (!response.ok) {
+              core.setFailed(`Discord webhook failed: ${response.status} ${response.statusText}`);
+            } else {
+              console.log('Discord notification sent successfully');
+            }
