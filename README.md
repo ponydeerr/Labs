@@ -17,7 +17,7 @@ Browse, view, and extract assets from Unreal Engine games — packages, textures
 
 ## Support
 
-Join the [Discord server](https://discord.gg/qBATMyYuNN) if you need help or want to report issues.
+Join the [Discord server](https://discord.gg/Msfzufh8tq) if you need help or want to report issues.
 
 ## Credits
 
